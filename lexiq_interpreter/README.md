@@ -19,14 +19,18 @@ In this example, the file `other.lq` is imported, then the `MAIN` rule is declar
 
 ### Installation
 
-You just need to `make` the project
+1. Clone the repository and change it to your working directory.
+
+2. Then, run `make` to enerate a `./lexiq` executable:
+
 ```bash
 $> make
 ```
 
-It will generate a `./lexiq` executable.
-If you want to perform an expression on a particular file, or multiple files you need to use the backquotes inside the double quotes
+3. If you want to perform an expression on a particular file, or multiple files, use the backquotes inside the double quotes:
+
 ```bash
 $> ./regex -s "`cat file`" -i rules.lq
 ```
-will execute the `MAIN` rule imported from `rules.lq` on the content of `file`.
+
+The above command will execute the `MAIN` rule imported from `rules.lq` on the content of `file`.
